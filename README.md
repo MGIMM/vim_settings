@@ -2,9 +2,10 @@
 
 ### install vim-plug
 
-```curl -fLo ~/.vim/autoload/plug.vim --create-dirs \```
-
-```https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim```
+```
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
     
 ### YCM
 download rustc and cargo for the python: https://www.rust-lang.org
