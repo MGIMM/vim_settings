@@ -24,6 +24,7 @@ endif
 "colorscheme seoul256 
 colo fahrenheit 
 "let g:sierra_Twilight=1
-let g:lightline = {'colorscheme':'wombat'}
-let g:ycm_register_as_syntastic_checker = 0
+let g:lightline = {'colorscheme':'seoul256'}
+"let g:ycm_register_as_syntastic_checker = 0
 "let g:livepreview_previewer = 'open -a Skim'
+set tw=75
