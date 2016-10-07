@@ -1,11 +1,12 @@
 set number
-set modeline
+"set modeline
 set encoding=utf-8
 set expandtab
-"set tabstop=2
-"set smartindent
+set shiftwidth=4
 set autoindent
 syntax on
+set textwidth=75
+set laststatus=2
 set pastetoggle=<F9>
 
 
@@ -27,4 +28,4 @@ colo fahrenheit
 let g:lightline = {'colorscheme':'seoul256'}
 "let g:ycm_register_as_syntastic_checker = 0
 "let g:livepreview_previewer = 'open -a Skim'
-set tw=75
+
