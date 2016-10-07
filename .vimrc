@@ -1,9 +1,11 @@
 set number
 "set modeline
 set encoding=utf-8
-set expandtab
+set tabstop=4
 set shiftwidth=4
-set autoindent
+set softtabstop=4
+set expandtab
+set smartindent
 syntax on
 set textwidth=75
 set laststatus=2
