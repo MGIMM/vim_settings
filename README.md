@@ -26,4 +26,4 @@ download latexmk by tlmgr.
 ```\lv``` to jump to the pdf file.
 
 ### copy & paste
-push ```<F9>``` in the insert mode to activate paste mode.
+press ```<F9>``` in insert mode to activate paste mode.
