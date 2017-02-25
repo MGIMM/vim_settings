@@ -7,19 +7,20 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
     
-### YCM (not recommend)
-download rustc and cargo for python: https://www.rust-lang.org
-```
-curl -sSf https://static.rust-lang.org/rustup.sh | sh
-```
-
-download cmake by brew (for mac user).
 
 ### colorscheme 
 put ```colors/``` to ```~/.vim/```
 
 ### Latex: vimtex
-download latexmk by tlmgr. 
+
+Install texlive
+```
+sudo apt install texlive-full
+sudo apt install xzdec
+tlmgr init-usertree
+sudo tlmgr update --all
+```
+make sure _latexmk_ is installed
 
 ```\ll``` to enter & quit continous mode.
 
