@@ -7,7 +7,7 @@ set softtabstop=4
 set expandtab
 set smartindent
 syntax on
-set textwidth=75
+set textwidth=60
 set laststatus=2
 set pastetoggle=<F9>
 
