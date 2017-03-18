@@ -2,17 +2,47 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/mgimm/.oh-my-zsh
+export ZSH=/home/mgimm/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-#
 # ZSH_THEME="random"
-ZSH_THEME="sunaku"
-# POWERLEVEL9K_MODE='awesome-fontconfig'
-# ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="sunaku"
+ZSH_THEME="powerlevel9k/powerlevel9k"
+#POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_MODE='awesome-patched'
+
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
+#
+POWERLEVEL9K_BATTERY_CHARGING='yellow'
+POWERLEVEL9K_BATTERY_CHARGED='green'
+POWERLEVEL9K_BATTERY_DISCONNECTED='$DEFAULT_COLOR'
+POWERLEVEL9K_BATTERY_LOW_THRESHOLD='10'
+POWERLEVEL9K_BATTERY_LOW_COLOR='red'
+# POWERLEVEL9K_BATTERY_ICON="\uF1E6"
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
+#POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="\uf0da"
+
+#POWERLEVEL9K_VCS_GIT_ICON='\ue60a'
+
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='yellow'
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
+#POWERLEVEL9K_VCS_UNTRACKED_ICON='?'
+
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status battery dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time background_jobs ram virtualenv rbenv rvm)
+
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=4
+
+POWERLEVEL9K_TIME_FORMAT="%D{\uE12E %H:%M \uE868 %d.%m.%y}"
+
+POWERLEVEL9K_STATUS_VERBOSE=false
+
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -88,4 +118,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias wechat='google-chrome --app="https://wx.qq.com"'
