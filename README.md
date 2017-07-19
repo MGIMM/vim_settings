@@ -1,15 +1,11 @@
 # vim settings
 
-### install vim-plug
-
-```
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
     
+### Backup dotfiles
 
-### colorscheme 
-put ```colors/``` to ```~/.vim/```
+```
+cp -TRv env_dotfiles/ ~/
+```
 
 ### Latex: vimtex
 
@@ -36,3 +32,20 @@ make sure _latexmk_ is installed
 
 ### copy & paste
 press ```<F9>``` in insert mode to activate paste mode.
+
+### install vim-plug (manually)
+
+This plugin is included in ```env_dotfiles/```
+
+```
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+then, type
+
+```
+:PlugInstall
+```
+
+in vim. 
