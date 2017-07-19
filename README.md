@@ -22,9 +22,17 @@ sudo tlmgr update --all
 ```
 make sure _latexmk_ is installed
 
-```\ll``` to enter & quit continous mode.
+```\ll``` : enter & quit continous mode.
 
-```\lv``` to jump to the pdf file.
+```\lv``` : jump to pdf file.
+
+```\lt``` : explore by sections.
+
+```\ly``` : explore by labels.
+
+```\le``` : show errors.
+
+```\lc``` : clean files.
 
 ### copy & paste
 press ```<F9>``` in insert mode to activate paste mode.
