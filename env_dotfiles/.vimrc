@@ -9,6 +9,7 @@ set smartindent
 syntax on
 set textwidth=55
 set laststatus=2
+set noshowmode
 set pastetoggle=<F9>
 set modifiable
 
