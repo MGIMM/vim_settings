@@ -130,5 +130,8 @@ source $ZSH/oh-my-zsh.sh
 alias wechat='google-chrome --app="https://wx.qq.com"'
 alias dbstart='env XDG_CURRENT_DESKTOP=Unity dropbox start -i'
 alias cluster='ssh -X du@hpc2.ljll.math.upmc.fr'
+alias dlmp3='python3 ~/Music/dl.py '
+alias draft='python3 ~/.backup_drafts.py'
+alias vim='vim --servername vim'
 bindkey -v
 export KEYTIMEOUT=1
