@@ -28,7 +28,7 @@ cp -TRv env_dotfiles/ ~/
 Install texlive
 ```
 sudo apt install texlive-full
-sudo apt install xzdec synctex
+sudo apt install xzdec libsynctex-dev xdotool
 tlmgr init-usertree
 sudo tlmgr update --all
 ```
