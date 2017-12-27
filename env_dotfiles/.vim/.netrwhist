@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/etc/apt/sources.list.d'
-let g:netrw_dirhist_2='/home/qiming/Documents/blog/archive'
-let g:netrw_dirhist_3='/home/qiming/.config'
-let g:netrw_dirhist_4='/home/qiming/Dropbox/version_3'
-let g:netrw_dirhist_5='/home/qiming/.vim'
-let g:netrw_dirhist_6='/home/qiming/.config'
-let g:netrw_dirhist_7='/home/qiming/.config/ubuntu-system-settings'
