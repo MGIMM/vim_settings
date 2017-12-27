@@ -1,39 +1,6 @@
 # vim settings
 
-    
-### Backup dotfiles
-
-```
-cp -TRv env_dotfiles/ ~/
-```
-
-### Latex: vimtex
-
-Install texlive
-```
-sudo apt install texlive-full
-sudo apt install xzdec
-tlmgr init-usertree
-sudo tlmgr update --all
-```
-make sure _latexmk_ is installed
-
-```\ll``` : enter & quit continous mode.
-
-```\lv``` : jump to pdf file.
-
-```\lt``` : explore by sections.
-
-```\ly``` : explore by labels.
-
-```\le``` : show errors.
-
-```\lc``` : clean files.
-
-### copy & paste
-press ```<F9>``` in insert mode to activate paste mode.
-
-### install vim-plug (manually)
+### install vim-plug 
 
 This plugin is included in ```env_dotfiles/```
 
@@ -49,3 +16,43 @@ then, type
 ```
 
 in vim. 
+    
+### Backup dotfiles
+
+```
+cp -TRv env_dotfiles/ ~/
+```
+
+### Latex: vimtex
+
+Install texlive
+```
+sudo apt install texlive-full
+sudo apt install xzdec libsynctex-dev xdotool
+tlmgr init-usertree
+sudo tlmgr update --all
+```
+make sure **latexmk** and **synctex** are installed
+
+
+```\ll``` : enter & quit continous mode
+
+```\lv``` : jump to pdf file + forward search
+
+```\lt``` : explore by sections
+
+```\ly``` : explore by labels
+
+```\le``` : show errors
+
+```\lc``` : clean files
+
+```\lr``` : backward search with **mupdf**
+
+```Ctrl + click``` : backward search with **zathura**
+
+
+### copy & paste
+
+press ```<F9>``` in insert mode to activate paste mode.
+

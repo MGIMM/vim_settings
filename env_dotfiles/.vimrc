@@ -31,4 +31,8 @@ colo delek
 let g:lightline = {'colorscheme':'seoul256'}
 "let g:ycm_register_as_syntastic_checker = 0
 "let g:livepreview_previewer = 'open -a Skim'
-let g:vimtex_compiler_latexmk = {'callback' : 0}
+"let g:vimtex_compiler_latexmk = {'callback' : 0}
+let g:latex_view_general_viewer = 'zathura'
+let g:vimtex_view_method = 'zathura'
+let g:latex_view_general_options = shellescape('--synctex-forward "' . exepath(v:progpath) . ' --servername ' . v:servername . ' +{%lline} {%ffile}"')
+
