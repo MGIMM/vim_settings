@@ -127,11 +127,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-alias wechat='google-chrome --app="https://wx.qq.com"'
+alias wechat='~/Documents/electronic-wechat-linux-x64/electronic-wechat'
 alias dbstart='env XDG_CURRENT_DESKTOP=Unity dropbox start -i'
 alias cluster='ssh -X du@hpc2.ljll.math.upmc.fr'
 alias dlmp3='python3 ~/Music/dl.py '
-alias draft='python3 ~/.backup_drafts.py'
+alias draft='cd $(python3 ~/.backup_drafts.py)'
 alias vim='vim --servername vim'
 bindkey -v
 export KEYTIMEOUT=1
