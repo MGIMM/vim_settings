@@ -29,6 +29,7 @@ if !has('gui_running')
 endif
 "set background=light
 "colo solarized
+"colo seoul256 
 colo delek 
 "let g:sierra_Twilight=1
 let g:lightline = {'colorscheme':'seoul256'}
