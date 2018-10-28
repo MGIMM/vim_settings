@@ -1,4 +1,6 @@
 $pdflatex = 'pdflatex -shell-escape -synctex=1 %O %S';
+# $pdflatex = 'lualatex --interaction=nonstopmode --shell-escape --synctex=1';
+ #$pdflatex = 'xelatex --shell-escape %O %S';
 
 # Set pdf viewer as in 'start VIEWER'
 # $pdf_previewer = 'start mupdf';
