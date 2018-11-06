@@ -3,25 +3,16 @@
 ### install vim-plug 
 
 This plugin is included in ```env_dotfiles/```
-
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-then, type
-
+Then, type
 ```
 :PlugInstall
 ```
-
 in vim. 
-    
-### Backup dotfiles
-
-```
-cp -TRv env_dotfiles/ ~/
-```
 
 ### Latex: vimtex
 
@@ -56,3 +47,22 @@ make sure **latexmk** and **synctex** are installed
 
 press ```<F9>``` in insert mode to activate paste mode.
 
+### install oh-my-zsh
+
+First, install ```zsh```. Then, install ```oh-my-zsh``` by curl
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+set ```zsh``` as default
+
+```
+chsh -s $(which zsh)
+```
+
+### Backup dotfiles
+
+```
+cp -TRv env_dotfiles/ ~/
+```

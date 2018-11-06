@@ -131,7 +131,7 @@ source $ZSH/oh-my-zsh.sh
 alias wechat='~/Documents/electronic-wechat-linux-x64/electronic-wechat'
 alias dbstart='env XDG_CURRENT_DESKTOP=Unity dropbox start -i'
 alias cluster='ssh -X du@hpc2.ljll.math.upmc.fr'
-alias dlmp3='/usr/bin/python3 ~/Music/dl.py '
+alias dlmp3='cd ~/Music ; python ~/Music/dl.py '
 DATE=`date +%d-%m-%Y`
 alias draft='mkdir -p ~/Documents/drafts/$DATE/ && cd ~/Documents/drafts/$DATE/'
 alias vim='vim --servername vim'
