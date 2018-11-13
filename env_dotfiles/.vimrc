@@ -27,8 +27,8 @@ set modifiable
 set autoindent
 filetype plugin on
 filetype indent on
-highlight BadWhitespace ctermbg=red guibg=red
 set hlsearch
+highlight BadWhitespace ctermbg=red guibg=red
 
 
 set pastetoggle=<F9>
@@ -47,18 +47,16 @@ set foldlevel=99
 nnoremap <space> za
 
 
-
 " Python, PEP-008
 au BufRead,BufNewFile *.py,*.pyw set expandtab
-\set textwidth=79
-\set tabstop=4
-\set softtabstop=4
-\set shiftwidth=4
-\set autoindent
-\match BadWhitespace /^\t\+/
-\match BadWhitespace /\s\+$/
-\set fileformat=unix
-\let b:comment_leader = '#'
+au BufRead,BufNewFile *.py,*.pyw set textwidth=139
+au BufRead,BufNewFile *.py,*.pyw set tabstop=4
+au BufRead,BufNewFile *.py,*.pyw set softtabstop=4
+au BufRead,BufNewFile *.py,*.pyw set shiftwidth=4
+au BufRead,BufNewFile *.py,*.pyw set autoindent
+au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /\s\+$\| \+\ze\t/ 
+au BufRead,BufNewFile *.py,*.pyw set fileformat=unix
+au BufRead,BufNewFile *.py,*.pyw let b:comment_leader = '#'
 
 au BufNewFile,BufRead *.js, *.html, *.css *.r *.tex *.txt
 \set tabstop=2
@@ -67,7 +65,8 @@ au BufNewFile,BufRead *.js, *.html, *.css *.r *.tex *.txt
 
 
 
-"" misc
+" misc
+let python_highlight_all=1
 "let g:seoul256_background = 252
 "colorscheme seoul256 
 colo delek 
