@@ -2,7 +2,6 @@
 
 ### install vim-plug 
 
-This plugin is included in ```env_dotfiles/```
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -20,8 +19,6 @@ Install texlive
 ```
 sudo apt install texlive-full
 sudo apt install xzdec libsynctex-dev xdotool
-tlmgr init-usertree
-sudo tlmgr update --all
 ```
 make sure **latexmk** and **synctex** are installed
 
@@ -38,14 +35,13 @@ make sure **latexmk** and **synctex** are installed
 
 ```\lc``` : clean files
 
-```\lr``` : backward search with **mupdf**
-
 ```Ctrl + click``` : backward search with **zathura**
 
 
-### copy & paste
+### misc
 
 press ```<F9>``` in insert mode to activate paste mode.
+press ```<F3>``` open/close NerdTree.
 
 ### install oh-my-zsh
 
