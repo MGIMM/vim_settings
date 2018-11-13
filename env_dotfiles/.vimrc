@@ -1,20 +1,40 @@
+call plug#begin('~/.vim/plugged')
+Plug 'jacoborus/tender'
+Plug 'itchyny/lightline.vim'
+"Plug 'Valloric/YouCompleteMe'
+Plug 'lervag/vimtex'
+Plug 'junegunn/seoul256.vim'
+Plug 'scrooloose/nerdtree'
+"Plug 'jistr/vim-nerdtree-tabs'
+call plug#end()
+
+if !has('gui_running')
+  set t_Co=256
+endif
+
 set number
-"set modeline
 set encoding=utf-8
 set tabstop=2
 set shiftwidth=2
-"set softtabstop=4
 set expandtab
 set smartindent
 syntax on
-set textwidth=65
+set textwidth=79
 set laststatus=2
 set noshowmode
-set pastetoggle=<F9>
 set modifiable
-"change default split direction
-set splitright
-let g:netrw_altv=1
+
+set autoindent
+filetype plugin on
+filetype indent on
+highlight BadWhitespace ctermbg=red guibg=red
+set hlsearch
+
+
+set pastetoggle=<F9>
+map <F3> :NERDTreeMirror<CR>
+map <F3> :NERDTreeToggle<CR>
+
 "split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -26,44 +46,36 @@ set foldlevel=99
 " Enable folding with the spacebar
 nnoremap <space> za
 
-au BufNewFile,BufRead *.py
-\ set tabstop=4
-\ set softtabstop=4
-\ set shiftwidth=4
-\ set textwidth=79
-\ set expandtab
-\ set autoindent
-\ set fileformat=unix
-au BufNewFile,BufRead *.js, *.html, *.css *.r *.tex
-\ set tabstop=2
-\ set softtabstop=2
-\ set shiftwidth=2
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+
+" Python, PEP-008
+au BufRead,BufNewFile *.py,*.pyw set expandtab
+\set textwidth=79
+\set tabstop=4
+\set softtabstop=4
+\set shiftwidth=4
+\set autoindent
+\match BadWhitespace /^\t\+/
+\match BadWhitespace /\s\+$/
+\set fileformat=unix
+\let b:comment_leader = '#'
+
+au BufNewFile,BufRead *.js, *.html, *.css *.r *.tex *.txt
+\set tabstop=2
+\set softtabstop=2
+\set shiftwidth=2
 
 
 
-call plug#begin('~/.vim/plugged')
-Plug 'jacoborus/tender'
-Plug 'itchyny/lightline.vim'
-"Plug 'Valloric/YouCompleteMe'
-Plug 'lervag/vimtex'
-Plug 'junegunn/seoul256.vim'
-call plug#end()
-
-if !has('gui_running')
-  set t_Co=256
-endif
-"set background=light
-"colo solarized
-"colo seoul256 
+"" misc
+"let g:seoul256_background = 252
+"colorscheme seoul256 
 colo delek 
 "let g:sierra_Twilight=1
 let g:lightline = {'colorscheme':'seoul256'}
-"let g:lightline = {'colorscheme':'solarized'}
 "let g:ycm_register_as_syntastic_checker = 0
-"let g:livepreview_previewer = 'open -a Skim'
-"let g:vimtex_compiler_latexmk = {'callback' : 0}
 let g:latex_view_general_viewer = 'zathura'
 let g:vimtex_view_method = 'zathura'
 let g:latex_view_general_options = shellescape('--synctex-forward "' . exepath(v:progpath) . ' --servername ' . v:servername . ' +{%lline} {%ffile}"')
-
+let g:netrw_altv=1 
+set splitright
