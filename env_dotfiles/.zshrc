@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Anaconda
-export PATH="/home/qiming/anaconda3/bin:$PATH"
+export PATH="/home/qiming/julia-1.0.1/bin:/home/qiming/anaconda3/bin:/usr/local/texlive/2018/bin/x86_64-linux:/usr/bin:$PATH"
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -131,11 +131,11 @@ source $ZSH/oh-my-zsh.sh
 alias wechat='~/Documents/electronic-wechat-linux-x64/electronic-wechat'
 alias dbstart='env XDG_CURRENT_DESKTOP=Unity dropbox start -i'
 alias cluster='ssh -X du@hpc2.ljll.math.upmc.fr'
-alias dlmp3='cd ~/Music ; python ~/Music/dl.py '
+alias dlmp3='cd ~/Music ; python ~/Dropbox/Backups/dl.py '
 DATE=`date +%d-%m-%Y`
 alias draft='mkdir -p ~/Documents/drafts/$DATE/ && cd ~/Documents/drafts/$DATE/'
 alias vim='vim --servername vim'
-alias dpt=' dptrp1 --client-id ~/Documents/dpt-rp1-py/certs/client_id.txt --key  ~/Documents/dpt-rp1-py/certs/key.pem --addr 172.25.47.1 '
+alias dpt=' dptrp1 --client-id ~/Dropbox/Backups/dpt-rp1/certs/client_id.txt --key  ~/Dropbox/Backups/dpt-rp1/certs/key.pem --addr 172.25.47.1 '
 alias ref='cd ~/Dropbox/references && vim ./'
 
 bindkey -v
