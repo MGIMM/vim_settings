@@ -79,6 +79,8 @@ au BufRead,BufNewFile *.jl let b:comment_leader = '#'
 
 
 " misc
+set clipboard=unnamedplus
+" "+yy: copy to sys clipboard
 let python_highlight_all=1
 "let g:seoul256_background = 252
 "colorscheme seoul256
@@ -91,3 +93,4 @@ let g:vimtex_view_method = 'zathura'
 let g:latex_view_general_options = shellescape('--synctex-forward "' . exepath(v:progpath) . ' --servername ' . v:servername . ' +{%lline} {%ffile}"')
 let g:netrw_altv=1
 set splitright
+

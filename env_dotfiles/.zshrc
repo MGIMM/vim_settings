@@ -1,7 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Anaconda
-export PATH="/home/qiming/julia-1.0.1/bin:/home/qiming/anaconda3/bin:/usr/local/texlive/2018/bin/x86_64-linux:/usr/bin:$PATH"
+#export PATH="/home/qiming/julia-1.0.1/bin:/home/qiming/anaconda3/bin:/usr/local/texlive/2018/bin/x86_64-linux:/usr/bin:$PATH"
+export PATH="/home/qiming/julia-1.0.1/bin:/home/qiming/anaconda3/bin:/usr/bin:$PATH"
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -132,6 +133,7 @@ alias wechat='~/Documents/electronic-wechat-linux-x64/electronic-wechat'
 alias dbstart='env XDG_CURRENT_DESKTOP=Unity dropbox start -i'
 alias cluster='ssh -X du@hpc2.ljll.math.upmc.fr'
 alias dlmp3='cd ~/Music ; python ~/Dropbox/Backups/dl.py '
+alias jemdoc='~/Tools/jemdoc/jemdoc.py'
 DATE=`date +%d-%m-%Y`
 alias draft='mkdir -p ~/Documents/drafts/$DATE/ && cd ~/Documents/drafts/$DATE/'
 alias vim='vim --servername vim'
