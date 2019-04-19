@@ -129,11 +129,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-alias wechat='~/Documents/electronic-wechat-linux-x64/electronic-wechat'
+alias wechat='~/Tools/electronic-wechat-linux-x64/electronic-wechat'
 alias dbstart='env XDG_CURRENT_DESKTOP=Unity dropbox start -i'
 alias cluster='ssh -X du@hpc2.ljll.math.upmc.fr'
 alias dlmp3='cd ~/Music ; python ~/Dropbox/Backups/dl.py '
 alias jemdoc='~/Tools/jemdoc/jemdoc.py'
+alias tikzedt='mono ~/Tools/tikzedt/TikzEdtWForms.exe'
 DATE=`date +%d-%m-%Y`
 alias draft='mkdir -p ~/Documents/drafts/$DATE/ && cd ~/Documents/drafts/$DATE/'
 alias vim='vim --servername vim'
