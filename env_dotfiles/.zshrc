@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Anaconda
 #export PATH="/home/qiming/julia-1.0.1/bin:/home/qiming/anaconda3/bin:/usr/local/texlive/2018/bin/x86_64-linux:/usr/bin:$PATH"
-export PATH="/home/qiming/julia-1.0.1/bin:/home/qiming/anaconda3/bin:/usr/bin:$PATH"
+export PATH="/home/qiming/julia-1.0.1/bin:/home/qiming/anaconda3/bin:/home/qiming/.local/bin:/usr/bin:$PATH"
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -136,10 +136,12 @@ alias dlmp3='cd ~/Music ; python ~/Dropbox/Backups/dl.py '
 alias jemdoc='~/Tools/jemdoc/jemdoc.py'
 alias tikzedt='mono ~/Tools/tikzedt/TikzEdtWForms.exe'
 DATE=`date +%d-%m-%Y`
-alias draft='mkdir -p ~/Documents/drafts/$DATE/ && cd ~/Documents/drafts/$DATE/'
+alias draft='mkdir -p ~/Dropbox/drafts/$DATE/ && cd ~/Dropbox/drafts/$DATE/'
 alias vim='vim --servername vim'
-alias dpt=' dptrp1 --client-id ~/Dropbox/Backups/dpt-rp1/certs/client_id.txt --key  ~/Dropbox/Backups/dpt-rp1/certs/key.pem --addr 172.25.47.1 '
+alias dpt='dptrp1 --client-id ~/Dropbox/Backups/dpt-rp1/certs/client_id.txt --key  ~/Dropbox/Backups/dpt-rp1/certs/key.pem --addr 172.25.47.1'
+alias dpt-notes-sync='python3 ~/Tools/dpt-rp1-py/dpt-notes-sync.py 172.25.47.1'
 alias ref='cd ~/Dropbox/references && vim ./'
+alias julia='~/Tools/julia-1.1.0/bin/julia'
 
 bindkey -v
 export KEYTIMEOUT=1

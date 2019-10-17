@@ -38,6 +38,7 @@ command BadSpace match BadWhiteSpace /\s\+$\| \+\ze\t/ | highlight BadWhiteSpace
 set pastetoggle=<F9>
 map <F3> :NERDTreeMirror<CR>
 map <F3> :NERDTreeToggle<CR>
+map <F4> :term ++curwin<CR>
 
 "split navigations
 nnoremap <C-J> <C-W><C-J>
@@ -45,8 +46,8 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 " Enable folding
-set foldmethod=indent
-set foldlevel=99
+"set foldmethod=indent
+"set foldlevel=99
 " Enable folding with the spacebar
 nnoremap <space> za
 
@@ -66,6 +67,8 @@ au BufNewFile,BufRead *.js, *.html, *.css *.r *.tex *.txt
 \set tabstop=2
 \set softtabstop=2
 \set shiftwidth=2
+
+au BufRead,BufNewFile *.tex setlocal spell spelllang=en_us
 
 " Julia
 au BufRead,BufNewFile *.jl set expandtab
