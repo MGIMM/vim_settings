@@ -6,6 +6,11 @@ Plug 'lervag/vimtex'
 Plug 'junegunn/seoul256.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'JuliaEditorSupport/julia-vim'
+Plug 'tomasr/molokai'
+Plug 'Marfisc/vorange'
+Plug 'KKPMW/sacredforest-vim'
+Plug 'sts10/vim-pink-moon'
+
 "Plug 'jistr/vim-nerdtree-tabs'
 call plug#end()
 
@@ -18,21 +23,20 @@ set encoding=utf-8
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set smartindent
+"set smartindent
 syntax on
 set textwidth=79
 set laststatus=2
 set noshowmode
 set modifiable
 
-set autoindent
 filetype plugin on
 filetype indent on
-set hlsearch
-highlight BadWhitespace ctermbg=red guibg=red
+"set hlsearch
+"highlight BadWhitespace ctermbg=red guibg=red
 
 " add manual BadWhiteSpace finder 
-command BadSpace match BadWhiteSpace /\s\+$\| \+\ze\t/ | highlight BadWhiteSpace ctermbg=red guibg=red
+"command BadSpace match BadWhiteSpace /\s\+$\| \+\ze\t/ | highlight BadWhiteSpace ctermbg=red guibg=red
 
 
 set pastetoggle=<F9>
@@ -81,19 +85,30 @@ au BufRead,BufNewFile *.jl set fileformat=unix
 au BufRead,BufNewFile *.jl let b:comment_leader = '#'
 
 
+let g:netrw_altv=1
+set splitright
+
 " misc
 set clipboard=unnamedplus
 " "+yy: copy to sys clipboard
-let python_highlight_all=1
-"let g:seoul256_background = 252
-"colorscheme seoul256
-colo delek
+" let python_highlight_all=1
+"colo delek
 "let g:sierra_Twilight=1
 let g:lightline = {'colorscheme':'seoul256'}
-"let g:ycm_register_as_syntastic_checker = 0
+
+
 let g:latex_view_general_viewer = 'zathura'
 let g:vimtex_view_method = 'zathura'
 let g:latex_view_general_options = shellescape('--synctex-forward "' . exepath(v:progpath) . ' --servername ' . v:servername . ' +{%lline} {%ffile}"')
-let g:netrw_altv=1
-set splitright
+
+let g:vimtex_indent_enable = 0
+let g:vimtex_matchparen_enabled = 0
+let g:tex_flavor = 'latex'
+"let g:tex_fast= ""
+
+let g:vorange_italic = 0
+colo vorange 
+set backspace=indent,eol,start
+
+
 
