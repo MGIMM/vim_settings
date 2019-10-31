@@ -1,0 +1,108 @@
+call plug#begin('~/.vim/plugged')
+Plug 'jacoborus/tender'
+Plug 'itchyny/lightline.vim'
+"Plug 'Valloric/YouCompleteMe'
+Plug 'lervag/vimtex'
+Plug 'junegunn/seoul256.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'JuliaEditorSupport/julia-vim'
+Plug 'tomasr/molokai'
+Plug 'Marfisc/vorange'
+Plug 'KKPMW/sacredforest-vim'
+Plug 'sts10/vim-pink-moon'
+
+"Plug 'jistr/vim-nerdtree-tabs'
+call plug#end()
+
+if !has('gui_running')
+  set t_Co=256
+endif
+
+set number
+set encoding=utf-8
+set tabstop=2
+set shiftwidth=2
+set expandtab
+syntax on
+set textwidth=79
+set laststatus=2
+set noshowmode
+set modifiable
+
+"set autoindent
+filetype plugin on
+filetype indent on
+"set hlsearch
+"highlight BadWhitespace ctermbg=red guibg=red
+
+" add manual BadWhiteSpace finder 
+" command BadSpace match BadWhiteSpace /\s\+$\| \+\ze\t/ | highlight BadWhiteSpace ctermbg=red guibg=red
+
+
+set pastetoggle=<F9>
+map <F3> :NERDTreeMirror<CR>
+map <F3> :NERDTreeToggle<CR>
+map <F4> :term ++curwin<CR>
+
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+" Enable folding
+"set foldmethod=indent
+"set foldlevel=99
+" Enable folding with the spacebar
+nnoremap <space> za
+
+
+" Python, PEP-008
+au BufRead,BufNewFile *.py,*.pyw set expandtab
+au BufRead,BufNewFile *.py,*.pyw set textwidth=139
+au BufRead,BufNewFile *.py,*.pyw set tabstop=4
+au BufRead,BufNewFile *.py,*.pyw set softtabstop=4
+au BufRead,BufNewFile *.py,*.pyw set shiftwidth=4
+au BufRead,BufNewFile *.py,*.pyw set autoindent
+au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /\s\+$\| \+\ze\t/
+au BufRead,BufNewFile *.py,*.pyw set fileformat=unix
+au BufRead,BufNewFile *.py,*.pyw let b:comment_leader = '#'
+
+au BufNewFile,BufRead *.js, *.html, *.css *.r *.tex *.txt
+\set tabstop=2
+\set softtabstop=2
+\set shiftwidth=2
+
+au BufRead,BufNewFile *.tex setlocal spell spelllang=en_us
+
+" Julia
+au BufRead,BufNewFile *.jl set expandtab
+au BufRead,BufNewFile *.jl set textwidth=139
+au BufRead,BufNewFile *.jl set tabstop=2
+au BufRead,BufNewFile *.jl set softtabstop=2
+au BufRead,BufNewFile *.jl set shiftwidth=2
+au BufRead,BufNewFile *.jl set autoindent
+au BufRead,BufNewFile *.jl set fileformat=unix
+au BufRead,BufNewFile *.jl let b:comment_leader = '#'
+
+
+" misc
+"set clipboard=unnamedplus
+" "+yy: copy to sys clipboard
+"
+let g:vorange_italic = 0
+colo vorange 
+
+let g:netrw_altv=1
+set splitright
+
+
+"Windows 10 setting
+let g:tex_flavor='latex'
+let g:vimtex_view_general_viewer = 'SumatraPDF' 
+let g:vimtex_view_general_options='-reuse-instance -forward-search @tex @line @pdf'
+let g:tex_fast=""
+let g:vimtex_indent_enable=0
+let g:vimtex_matchparen_enabled=0
+set backspace=indent,eol,start
+"set guifont=Consolas:h11
+set guifont=Lucida_Console:h11
