@@ -129,11 +129,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-alias wechat='~/Tools/electronic-wechat-linux-x64/electronic-wechat'
+
+alias wechat='LC_ALL="zh_CN.UTF8" wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Tencent/WeChat/WeChat.exe'
 alias dbstart='env XDG_CURRENT_DESKTOP=Unity dropbox start -i'
 alias cluster='ssh -X du@hpc2.ljll.math.upmc.fr'
 alias dlmp3='cd ~/Music ; python ~/Dropbox/Backups/dl.py '
-alias jemdoc='~/Tools/jemdoc/jemdoc.py'
+alias jemdoc='/usr/bin/python ~/Tools/jemdoc/jemdoc.py'
 alias tikzedt='mono ~/Tools/tikzedt/TikzEdtWForms.exe'
 DATE=`date +%d-%m-%Y`
 alias draft='mkdir -p ~/Dropbox/drafts/$DATE/ && cd ~/Dropbox/drafts/$DATE/'
@@ -141,7 +142,23 @@ alias vim='vim --servername vim'
 alias dpt='dptrp1 --client-id ~/Dropbox/Backups/dpt-rp1/certs/client_id.txt --key  ~/Dropbox/Backups/dpt-rp1/certs/key.pem --addr 172.25.47.1'
 alias dpt-notes-sync='python3 ~/Tools/dpt-rp1-py/dpt-notes-sync.py 172.25.47.1'
 alias ref='cd ~/Dropbox/references && vim ./'
-alias julia='~/Tools/julia-1.1.0/bin/julia'
-
+alias julia='~/julia-1.4.2/bin/julia'
 bindkey -v
 export KEYTIMEOUT=1
+# pdftk source.pdf output destination.pdf user_pw password
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/qiming/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/qiming/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/qiming/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/qiming/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

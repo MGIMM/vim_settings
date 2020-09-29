@@ -13,8 +13,8 @@ set zoom-min 10
 # copy-paste
 set selection-clipboard clipboard
 
-set highlight-color \#c4d4f5
-set highlight-active-color \#00BC00
+set highlight-color \#FFFFC8
+set highlight-active-color \#FFFF01
 set completion-highlight-fg \#9FBC00
 set completion-highlight-bg \#00BC00
-set highlight-transparency 0.05
+set highlight-transparency 0.4

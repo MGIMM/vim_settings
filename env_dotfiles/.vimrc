@@ -32,7 +32,7 @@ set modifiable
 
 filetype plugin on
 filetype indent on
-"set hlsearch
+set hlsearch
 "highlight BadWhitespace ctermbg=red guibg=red
 
 " add manual BadWhiteSpace finder 
@@ -63,7 +63,7 @@ au BufRead,BufNewFile *.py,*.pyw set tabstop=4
 au BufRead,BufNewFile *.py,*.pyw set softtabstop=4
 au BufRead,BufNewFile *.py,*.pyw set shiftwidth=4
 au BufRead,BufNewFile *.py,*.pyw set autoindent
-au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /\s\+$\| \+\ze\t/
+"au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /\s\+$\| \+\ze\t/
 au BufRead,BufNewFile *.py,*.pyw set fileformat=unix
 au BufRead,BufNewFile *.py,*.pyw let b:comment_leader = '#'
 
@@ -107,8 +107,9 @@ let g:tex_flavor = 'latex'
 "let g:tex_fast= ""
 
 let g:vorange_italic = 0
-colo vorange 
-set backspace=indent,eol,start
+"colo vorange 
+colo delek 
+"set backspace=indent,eol,start
 
 
 
