@@ -10,6 +10,9 @@ Plug 'tomasr/molokai'
 Plug 'Marfisc/vorange'
 Plug 'KKPMW/sacredforest-vim'
 Plug 'sts10/vim-pink-moon'
+Plug 'crusoexia/vim-monokai'
+Plug 'mcmartelle/vim-monokai-bold'
+Plug 'micha/vim-colors-solarized'
 
 "Plug 'jistr/vim-nerdtree-tabs'
 call plug#end()
@@ -86,11 +89,26 @@ au BufRead,BufNewFile *.jl let b:comment_leader = '#'
 
 
 " misc
-"set clipboard=unnamedplus
-" "+yy: copy to sys clipboard
+set clipboard=unnamedplus
+"+yy: copy to sys clipboard
+noremap y "*y
+noremap p "*p
+"noremap Y "+y
+"noremap P "+p
 "
-let g:vorange_italic = 0
-colo vorange 
+" let g:vorange_italic = 0
+" colo vorange 
+"
+"
+"colo molokai 
+"let g:molokai_original = 1
+"colo molokai
+colo solarized 
+set background=light
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }
+
 
 let g:netrw_altv=1
 set splitright
@@ -104,5 +122,16 @@ let g:tex_fast=""
 let g:vimtex_indent_enable=0
 let g:vimtex_matchparen_enabled=0
 set backspace=indent,eol,start
+" to be specified in sumatraPDF: gvim --remote-silent +%l "%f"
+
+
+
 "set guifont=Consolas:h11
-set guifont=Lucida_Console:h11
+set guifont=Ubuntu_mono:h12
+
+set belloff=all
+"set guioptions -=m 
+set guioptions -=T 
+
+
+
